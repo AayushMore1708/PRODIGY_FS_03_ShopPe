@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Mern Stack Backend And Frontend",
+			"dependsOn": [
+				"Run Mern Stack Backend And Frontend: Run Mern Stack Backend",
+				"Run Mern Stack Backend And Frontend: Run Mern Stack Frontend"
+			],
+			"presentation": {
+				"group": "build"
+			},
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Run Mern Stack Backend And Frontend: Run Mern Stack Frontend",
+			"command": "cd frontend && npm start dev",
+			"isShellCommand": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Mern Stack Backend And Frontend: Run Mern Stack Backend",
+			"command": "cd backend && node server.js",
+			"isShellCommand": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
